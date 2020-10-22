@@ -3,7 +3,7 @@
   <div class="jumbotron">
     <h1>Welcome to the School Detail Page</h1>
     <h2>School Details:</h2>
-    <p>Id_num: {{school_details.id}}</p>
+   
     <p>Name: {{school_details.name}}</p>
     <p>Principal: {{school_details.principal}}</p>
     <p>Location: {{school_details.location}}</p>
@@ -15,5 +15,16 @@
 
   </div>
  
+  <div class="container">
+    <p><a class='btn btn-warning' href="{% url 'basic_app:update' pk=school_details.pk %}">Update</a></p>
+
+  </div>
+
+  <div class="container">
+    <p><a class='btn btn-warning' href="{% url 'basic_app:delete' pk=school_details.pk %}">Delete</a></p>
+
+  </div>
+
+
 
 {% endblock %}
